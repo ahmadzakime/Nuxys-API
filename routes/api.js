@@ -958,32 +958,6 @@ router.get('/quran', async (req, res, next) => {
 })
 })
 
-router.get('/instagram', async (req, res, next) => {
-
-        var apikeyInput = req.query.apikey,
-
-            url = req.query.url
-            
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-    if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
-    
-    ryzen.igstory(username).then(async (data) => {
-		if (!data) return res.json(loghandler.instgram) 
-		limitapikey(req.query.apikey)
-		res.json({
-			status: true,
-	        creator: `${creator}`,
-			result: data
-	    })
-	})
-
-         .catch(e => {
-         	res.sendFile(error)
-})
-})
-
-
 router.get('/fbdown', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
