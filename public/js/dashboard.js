@@ -113,28 +113,18 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-var battery_Level = document.getElementById("battery_Level");
-			var styleBatteryLevel = batteryLevel.style;
-			var percentageLevel = document.getElementById("percentageLevel");
-			navigator.getBattery().then(function(battery) {
-			function updateAllBatteryInfo(){
-			updateLevelInfo();
-			}
-			updateAllBatteryInfo();
-			battery.addEventListener('levelchange',      function(){
-			setInterval(function(){
-			updateLevelInfo()
-			},1000);
-			});
-			function updateLevelInfo(){
-			var numBattery = battery.level * 100;
-			percentageLevel.textContent=Math.round(numBattery) + "%";
-			styleBatteryLevel.height=numBattery + "%";
-			if(numBattery<=15) {
-			styleBatteryLevel.background="red";
-			}
-			};
-			});
+tag_battery_status = document.querySelector('small#battery_status');
+tag_battery_level = document.querySelector('span#battery_level');
+   
+
+//Baterry
+     setInterval(function() {
+         navigator.getBattery().then(battery=> {
+             battery_level = String(battery.level).split('.')[1];
+             tag_battery_level.innerHTML = `${(battery_level.length <= 1)? oud(Number(battery_level)): battery_level}% ${battery.charging ? 'charging': 'discharging'}`;
+         });
+     },
+         10);
 
 	const Image = ["./../images/logo1.png","./../images/logo2.png","./../images/logo3.jpeg"]
 	const randImage = Image[Math.floor(Math.random() * Image.length)];
