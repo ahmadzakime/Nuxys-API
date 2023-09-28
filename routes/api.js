@@ -967,14 +967,13 @@ router.get('/fbdown', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       fetch(encodeURI(`https://fb-api-zhirrr.vercel.app/?url=${url}`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-                 result
-             })
-         })
+       ryzen.fbdown(url).then(data => {
+	res.json({
+	status: true,
+	creator: `${creator}`,
+	result:	data
+	})
+	})
          .catch(e => {
          	res.sendFile(error)
 })
