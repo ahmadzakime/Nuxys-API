@@ -967,7 +967,7 @@ router.get('/fbdown', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       ryzen.fbdown(url).then(data => {
+       fbdown(url).then(data => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
