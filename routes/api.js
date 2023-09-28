@@ -4494,28 +4494,6 @@ try {
    }
 })
 
-router.get('/instagram', async (req, res, next) => {
-        var apikeyInput = req.query.apikey,
-	    url = req.query.url;
-
-try {
-  if(!apikeyInput) return res.json(loghandler.notparam)
-  if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-  if (!url) return res.json(loghandler.noturl)
-  if (!url.startsWith('http')) return res.json(logahndler.invalidLink)
-
-     bch.snapsave(`${text}`)
-                .then(async(result) => {
-                for(let i of result)
-        var i = data;
-             res.json({
-             	author: 'Zaki',
-                 result
-             })
-         .catch(e => {
-         	res.sendFile(error)
-})
-
 router.get('/towebp', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
 	    url = req.query.url;
