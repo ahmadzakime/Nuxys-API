@@ -956,7 +956,6 @@ router.get('/quran', async (req, res, next) => {
          .catch(e => {
          	res.sendFile(error)
 })
-})
 
 router.get('/fbdown', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
