@@ -38,7 +38,7 @@ var router  = express.Router();
 
 var { tts, wait, simih, getBuffer, h2k, banner, getRandom, start, info, success, close, pickRandom } = require(__path + '/lib/functions.js');
 var { RemoveBg } = require('remove.bg');
-var { tahta, fbdown } = require(__path + '/lib/tahta.js');
+var { tahta, fbdown, igdl } = require(__path + '/lib/tahta.js');
 var { createHash } = require('crypto')
 var { spawn, exec } = require('child_process');
 var { color, bgcolor } = require(__path + '/lib/color.js');
@@ -958,7 +958,7 @@ router.get('/quran', async (req, res, next) => {
 })
 })
 
-router.get('/fbdown', async (req, res, next) => {
+router.get('/igdl', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
             
@@ -966,7 +966,7 @@ router.get('/fbdown', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       fbdown(url).then(data => {
+       igdl(url).then(data => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
