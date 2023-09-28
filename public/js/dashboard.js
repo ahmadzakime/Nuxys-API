@@ -31,7 +31,7 @@ xhr.send();
 // Visitor
 function getvisitor(){
     var xhr = new XMLHttpRequest();
-    var url = 'https://api.countapi.xyz/hit/janbot-api.herokuapp.com/visits';
+    var url = 'https://restapinux-d6d81be12bf3.herokuapp.com/';
     xhr.onloadend = function(){
     data = JSON.parse(this.responseText);
     document.getElementById("visits").textContent = data.value
