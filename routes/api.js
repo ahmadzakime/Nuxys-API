@@ -435,7 +435,7 @@ axios.get('https://jadwalnonton.com/now-playing')
 })
 
 
-router.get('/api/short/tiny', async (req, res, next) => {
+router.get('/short/tiny', async (req, res, next) => {
     var apikeyInput = req.query.apikey,
         url = req.query.url
 
@@ -460,7 +460,7 @@ router.get('/api/short/tiny', async (req, res, next) => {
      })
 })
 
-router.get('/api/base', async (req, res, next) => {
+router.get('/base', async (req, res, next) => {
 	var type = req.query.type,
 		encode = req.query.encode,
 		decode = req.query.decode,
@@ -515,7 +515,7 @@ router.get('/api/base', async (req, res, next) => {
 			}
 })
 
-router.get('/api/nulis', async (req, res, next) => {
+router.get('/nulis', async (req, res, next) => {
 	var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -553,7 +553,7 @@ router.get('/api/nulis', async (req, res, next) => {
    }
 })
 
-router.get('/api/nulis2', async (req, res, next) => {
+router.get('/nulis2', async (req, res, next) => {
 	var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -616,7 +616,7 @@ router.get('/api/nulis2', async (req, res, next) => {
            }
 })
 
-router.get('/api/textmaker', async (req, res, next) => {
+router.get('/textmaker', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -699,7 +699,7 @@ router.get('/api/textmaker', async (req, res, next) => {
         }
 })
 
-router.get('/api/textmaker/game', async (req, res, next) => {
+router.get('/textmaker/game', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -788,7 +788,7 @@ router.get('/api/textmaker/game', async (req, res, next) => {
         }
 })
 
-router.get('/api/textmaker/senja', async (req, res, next) => {
+router.get('/textmaker/senja', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -875,7 +875,7 @@ router.get('/api/textmaker/senja', async (req, res, next) => {
         }
 })
 
-router.get('/api/kisahnabi', async (req, res, next) => {
+router.get('/kisahnabi', async (req, res, next) => {
 	var nabi = req.query.nabi,
 		apikeyInput = req.query.apikey;
 
@@ -894,7 +894,7 @@ router.get('/api/kisahnabi', async (req, res, next) => {
 		})
 })
 
-router.get('/api/infogempa', async (req, res, next) => {
+router.get('/infogempa', async (req, res, next) => {
 	        var apikeyInput = req.query.apikey
 
 		if (!apikeyInput) return res.json(loghandler.notparam)
@@ -912,7 +912,7 @@ router.get('/api/infogempa', async (req, res, next) => {
 		})
 })
 
-router.get('/api/hadits', async (req, res, next) => {
+router.get('/hadits', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             kitab = req.query.kitab,
             nomor = req.query.nomor
@@ -935,7 +935,7 @@ router.get('/api/hadits', async (req, res, next) => {
      })
 })
  
-router.get('/api/quran', async (req, res, next) => {
+router.get('/quran', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             surah = req.query.surah,
             ayat = req.query.ayat
@@ -980,7 +980,7 @@ router.get('/api/fbdown', async (req, res, next) => {
 })
 
 
-router.get('/api/textmaker/metallic', async (req, res, next) => {
+router.get('/textmaker/metallic', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -1067,7 +1067,7 @@ router.get('/api/textmaker/metallic', async (req, res, next) => {
         }
 })
 
-router.get('/api/textmaker/alam', async (req, res, next) => {
+router.get('/textmaker/alam', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -1154,7 +1154,7 @@ router.get('/api/textmaker/alam', async (req, res, next) => {
         }
 })
 
-router.get('/api/flaming', async (req, res, next) => {
+router.get('/flaming', async (req, res, next) => {
          var text = req.query.text,
              apikeyInput = req.query.apikey;
         
@@ -1174,7 +1174,7 @@ router.get('/api/flaming', async (req, res, next) => {
        }
 })
 
-router.get('/api/neon', async (req, res, next) => {
+router.get('/neon', async (req, res, next) => {
          var text = req.query.text,
              apikeyInput = req.query.apikey;
         
@@ -1194,7 +1194,7 @@ router.get('/api/neon', async (req, res, next) => {
        }
 })
 
-router.get('/api/muslim/tahlil', async (req, res, next) => {
+router.get('/muslim/tahlil', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1214,7 +1214,7 @@ router.get('/api/muslim/tahlil', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/wirid', async (req, res, next) => {
+router.get('/muslim/wirid', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1234,7 +1234,7 @@ router.get('/api/muslim/wirid', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/ayatkursi', async (req, res, next) => {
+router.get('/muslim/ayatkursi', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1254,7 +1254,7 @@ router.get('/api/muslim/ayatkursi', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/doaharian', async (req, res, next) => {
+router.get('/muslim/doaharian', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1274,7 +1274,7 @@ router.get('/api/muslim/doaharian', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/bacaanshalat', async (req, res, next) => {
+router.get('/muslim/bacaanshalat', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1294,7 +1294,7 @@ router.get('/api/muslim/bacaanshalat', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/niatshalat', async (req, res, next) => {
+router.get('/muslim/niatshalat', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1314,7 +1314,7 @@ router.get('/api/muslim/niatshalat', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/kisahnabi', async (req, res, next) => {
+router.get('/muslim/kisahnabi', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1334,7 +1334,7 @@ router.get('/api/muslim/kisahnabi', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/asmaulhusna', async (req, res, next) => {
+router.get('/muslim/asmaulhusna', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1354,7 +1354,7 @@ router.get('/api/muslim/asmaulhusna', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/niatshubuh', async (req, res, next) => {
+router.get('/muslim/niatshubuh', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1374,7 +1374,7 @@ router.get('/api/muslim/niatshubuh', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/niatdzuhur', async (req, res, next) => {
+router.get('/muslim/niatdzuhur', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1394,7 +1394,7 @@ router.get('/api/muslim/niatdzuhur', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/niatmaghrib', async (req, res, next) => {
+router.get('/muslim/niatmaghrib', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1414,7 +1414,7 @@ router.get('/api/muslim/niatmaghrib', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/niatisya', async (req, res, next) => {
+router.get('/muslim/niatisya', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1434,7 +1434,7 @@ router.get('/api/muslim/niatisya', async (req, res, next) => {
 })
 
 
-router.get('/api/muslim/niatashar', async (req, res, next) => {
+router.get('/muslim/niatashar', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1454,7 +1454,7 @@ router.get('/api/muslim/niatashar', async (req, res, next) => {
 })
 
 
-router.get('/api/wallpaper/cyberspace', async (req, res, next) => {
+router.get('/wallpaper/cyberspace', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1474,7 +1474,7 @@ router.get('/api/wallpaper/cyberspace', async (req, res, next) => {
 })
 
 
-router.get('/api/api/wallpaper/teknologi', async (req, res, next) => {
+router.get('/api/wallpaper/teknologi', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1494,7 +1494,7 @@ router.get('/api/api/wallpaper/teknologi', async (req, res, next) => {
 })
 
 
-router.get('/api/wallpaper/muslim', async (req, res, next) => {
+router.get('/wallpaper/muslim', async (req, res, next) => {
         var apikeyInput =req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1514,7 +1514,7 @@ router.get('/api/wallpaper/muslim', async (req, res, next) => {
 })
 
 
-router.get('/api/wallpaper/programming', async (req, res, next) => {
+router.get('/wallpaper/programming', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1534,7 +1534,7 @@ router.get('/api/wallpaper/programming', async (req, res, next) => {
 })
 
 
-router.get('/api/wallpaper/pegunungan', async (req, res, next) => {
+router.get('/wallpaper/pegunungan', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1554,7 +1554,7 @@ router.get('/api/wallpaper/pegunungan', async (req, res, next) => {
 })
 
 
-router.get('/api/wikipedia', async (req, res, next) => {
+router.get('/wikipedia', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             search = req.query.search
             
@@ -1575,7 +1575,7 @@ router.get('/api/wikipedia', async (req, res, next) => {
 })
 })
 
-router.get('/api/randomquote/muslim', async (req, res, next) => {
+router.get('/randomquote/muslim', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1595,7 +1595,7 @@ router.get('/api/randomquote/muslim', async (req, res, next) => {
 })
 
 
-router.get('/api/drakorasia', async (req, res, next) => {
+router.get('/drakorasia', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             search = req.query.searc
             
@@ -1617,7 +1617,7 @@ router.get('/api/drakorasia', async (req, res, next) => {
 })
 
 
-router.get('/api/jadwalshalat', async (req, res, next) => {
+router.get('/jadwalshalat', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             kota = req.query.kota
             
@@ -1639,7 +1639,7 @@ router.get('/api/jadwalshalat', async (req, res, next) => {
 })
 
 
-router.get('/api/fakedata', async (req, res, next) => {
+router.get('/fakedata', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             country = req.query.country
             
@@ -1661,7 +1661,7 @@ router.get('/api/fakedata', async (req, res, next) => {
 })
 
 
-router.get('/api/hilih', async (req, res, next) => {
+router.get('/hilih', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             kata = req.query.kata
             
@@ -1683,7 +1683,7 @@ router.get('/api/hilih', async (req, res, next) => {
 })
 
 
-router.get('/api/liriklagu', async (req, res, next) => {
+router.get('/liriklagu', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             lagu = req.query.lagu
             
@@ -1699,7 +1699,7 @@ router.get('/api/liriklagu', async (req, res, next) => {
              })
 })
 
-router.get('/api/chordlagu', async (req, res, next) => {
+router.get('/chordlagu', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             lagu = req.query.lagu
             
@@ -1721,7 +1721,7 @@ router.get('/api/chordlagu', async (req, res, next) => {
 })
 
 
-router.get('/api/random/asmaulhusna', async (req, res, next) => {
+router.get('/random/asmaulhusna', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1741,7 +1741,7 @@ router.get('/api/random/asmaulhusna', async (req, res, next) => {
 })
 
 
-router.get('/api/kbbi', async (req, res, next) => {
+router.get('/kbbi', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             kata = req.query.kata
             
@@ -1763,7 +1763,7 @@ router.get('/api/kbbi', async (req, res, next) => {
 })
 
 
-router.get('/api/covidindo', async (req, res, next) => {
+router.get('/covidindo', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1783,7 +1783,7 @@ router.get('/api/covidindo', async (req, res, next) => {
 })
 
 
-router.get('/api/covidworld', async (req, res, next) => {
+router.get('/covidworld', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1803,7 +1803,7 @@ router.get('/api/covidworld', async (req, res, next) => {
 })
 
 
-router.get('/api/kodepos', async (req, res, next) => {
+router.get('/kodepos', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
 	    kota = req.query.kota
             
@@ -1825,7 +1825,7 @@ router.get('/api/kodepos', async (req, res, next) => {
 })
 
 
-router.get('/api/infocuaca', async (req, res, next) => {
+router.get('/infocuaca', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
 	    provinsi = req.query.provinsi
             
@@ -1846,7 +1846,7 @@ router.get('/api/infocuaca', async (req, res, next) => {
 })
 
 
-router.get('/api/infocuaca/bandara', async (req, rs, next) => {
+router.get('/infocuaca/bandara', async (req, rs, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1865,7 +1865,7 @@ router.get('/api/infocuaca/bandara', async (req, rs, next) => {
 })
 
 
-router.get('/api/infocuaca/dunia', async (req, res, next) => {
+router.get('/infocuaca/dunia', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1884,7 +1884,7 @@ router.get('/api/infocuaca/dunia', async (req, res, next) => {
 })
 
 
-router.get('/api/infotsunami', async (req, res, next) => {
+router.get('/infotsunami', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1903,7 +1903,7 @@ router.get('/api/infotsunami', async (req, res, next) => {
 })
 
 
-router.get('/api/random/meme', async (req, res, next) => {
+router.get('/random/meme', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1923,7 +1923,7 @@ router.get('/api/random/meme', async (req, res, next) => {
 })
 
 
-router.get('/api/quotes/kanye', async (req, res, next) => {
+router.get('/quotes/kanye', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -1943,7 +1943,7 @@ router.get('/api/quotes/kanye', async (req, res, next) => {
 })
 
 
-router.get('/api/translate', async (req, res, next) => {
+router.get('/translate', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
 	    kata = req.query.kata
             
@@ -1964,7 +1964,7 @@ router.get('/api/translate', async (req, res, next) => {
 })
 
 
-router.get('/api/anime/kusonime', async (req, res, next) => {
+router.get('/anime/kusonime', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
 	    search = req.query.search
             
@@ -1985,7 +1985,7 @@ router.get('/api/anime/kusonime', async (req, res, next) => {
 })
 
 
-router.get('/api/gabut', async (req, res, next) => {
+router.get('/gabut', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2005,7 +2005,7 @@ router.get('/api/gabut', async (req, res, next) => {
 })
 
 
-router.get('/api/manga', async (req, res, next) => {
+router.get('/manga', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
 	    search = req.query.search
             
@@ -2025,7 +2025,7 @@ router.get('/api/manga', async (req, res, next) => {
 })
 
 
-router.get('/api/random/wallpaper', async (req, res, next) => {
+router.get('/random/wallpaper', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2045,7 +2045,7 @@ router.get('/api/random/wallpaper', async (req, res, next) => {
 })
 
 
-router.get('/api/kuis/caklontong', async (req, res, next) => {
+router.get('/kuis/caklontong', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2065,7 +2065,7 @@ router.get('/api/kuis/caklontong', async (req, res, next) => {
 })
 })
 
-router.get('/api/kuis/tebakgambar', async (req, res, next) => {
+router.get('/kuis/tebakgambar', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2085,7 +2085,7 @@ router.get('/api/kuis/tebakgambar', async (req, res, next) => {
 })
 })
 
-router.get('/api/news/cnn', async (req, res, next) => {
+router.get('/news/cnn', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             type = req.query.type
             
@@ -2108,7 +2108,7 @@ router.get('/api/news/cnn', async (req, res, next) => {
 })
 
 
-router.get('/api/news/cnbc', async (req, res, next) => {
+router.get('/news/cnbc', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             type = req.query.type
            
@@ -2131,7 +2131,7 @@ router.get('/api/news/cnbc', async (req, res, next) => {
 })
 
 
-router.get('/api/news/republika', async (req, res, next) => {
+router.get('/news/republika', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             type = req.query.type
             
@@ -2154,7 +2154,7 @@ router.get('/api/news/republika', async (req, res, next) => {
 })
 
 
-router.get('/api/news/tempo', async (req, res, next) => {
+router.get('/news/tempo', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             type = req.query.type
             
@@ -2177,7 +2177,7 @@ router.get('/api/news/tempo', async (req, res, next) => {
 })
 
 
-router.get('/api/news/antara', async (req, res, next) => {
+router.get('/news/antara', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             type = req.query.type
             
@@ -2200,7 +2200,7 @@ router.get('/api/news/antara', async (req, res, next) => {
 })
 
 
-router.get('/api/news/kumparan', async (req, res, next) => {
+router.get('/news/kumparan', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2221,7 +2221,7 @@ router.get('/api/news/kumparan', async (req, res, next) => {
 })
 
 
-router.get('/api/filmapik/search', async (req, res, next) => {
+router.get('/filmapik/search', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             film = req.query.film
             
@@ -2244,7 +2244,7 @@ router.get('/api/filmapik/search', async (req, res, next) => {
 })
 
 
-router.get('/api/filmapik/kategori', async (req, res, next) => {
+router.get('/filmapik/kategori', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             film = req.query.film
             
@@ -2267,7 +2267,7 @@ router.get('/api/filmapik/kategori', async (req, res, next) => {
 })
 
 
-router.get('/api/filmapik/play', async (req, res, next) => {
+router.get('/filmapik/play', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             id = req.query.id
             
@@ -2290,7 +2290,7 @@ router.get('/api/filmapik/play', async (req, res, next) => {
 })
 
 
-router.get('/api/filmapik/terbaru', async (req, res, next) => {
+router.get('/filmapik/terbaru', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2311,7 +2311,7 @@ router.get('/api/filmapik/terbaru', async (req, res, next) => {
 })
 
 
-router.get('/api/lk21/search', async (req, res, next) => {
+router.get('/lk21/search', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             film = req.query.film
             
@@ -2333,7 +2333,7 @@ router.get('/api/lk21/search', async (req, res, next) => {
 })
 })
 
-router.get('/api/playstore', async (req, res, next) => {
+router.get('/playstore', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             namaapk = req.query.namaapk
             
@@ -2355,7 +2355,7 @@ router.get('/api/playstore', async (req, res, next) => {
 })
 })
 
-router.get('/api/happymod', async (req, res, next) => {
+router.get('/happymod', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             namaapk = req.query.namaapk
             
@@ -2377,7 +2377,7 @@ router.get('/api/happymod', async (req, res, next) => {
 })
 })
 
-router.get('/api/Gsm', async (req, res, next) => {
+router.get('/Gsm', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             ygdicarik = req.query.ygdicarik
             
@@ -2399,7 +2399,7 @@ router.get('/api/Gsm', async (req, res, next) => {
 })
 })
 
-router.get('/api/sticker', async (req, res, next) => {
+router.get('/sticker', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             nama = req.query.nama
             
@@ -2421,7 +2421,7 @@ router.get('/api/sticker', async (req, res, next) => {
 })
 })
 
-router.get('/api/sticker/line', async (req, res, next) => {
+router.get('/sticker/line', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             link = req.query.link
             
@@ -2443,7 +2443,7 @@ router.get('/api/sticker/line', async (req, res, next) => {
 })
 })
 
-router.get('/api/sticker/telegram', async (req, res, next) => {
+router.get('/sticker/telegram', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             link = req.query.link
             
@@ -2465,7 +2465,7 @@ router.get('/api/sticker/telegram', async (req, res, next) => {
 })
 })
 
-router.get('/api/jadwal/tv', async (req, res, next) => {
+router.get('/jadwal/tv', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             channel = req.query.channel
             
@@ -2487,7 +2487,7 @@ router.get('/api/jadwal/tv', async (req, res, next) => {
 })
 })
 
-router.get('/api/iguser', async (req, res, next) => {
+router.get('/iguser', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             nama = req.query.nama
             
@@ -2509,7 +2509,7 @@ router.get('/api/iguser', async (req, res, next) => {
 })
 })
 
-router.get('/api/lk21/terbaru', async (req, res, next) => {
+router.get('/lk21/terbaru', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2530,7 +2530,7 @@ router.get('/api/lk21/terbaru', async (req, res, next) => {
 })
 
 
-router.get('/api/lk21/comingsoon', async (req, res, next) => {
+router.get('/lk21/comingsoon', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2551,7 +2551,7 @@ router.get('/api/lk21/comingsoon', async (req, res, next) => {
 })
 
 
-router.get('/api/lk21/tvseries', async (req, res, next) => {
+router.get('/lk21/tvseries', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
@@ -2572,7 +2572,7 @@ router.get('/api/lk21/tvseries', async (req, res, next) => {
 })
 
 
-router.get('/api/lk21/year', async (req, res, next) => {
+router.get('/lk21/year', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             tahun = req.query.tahun
             
@@ -2595,7 +2595,7 @@ router.get('/api/lk21/year', async (req, res, next) => {
 })
 
 
-router.get('/api/lk21/country', async (req, res, next) => {
+router.get('/lk21/country', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             negara = req.query.negara
             
@@ -2617,7 +2617,7 @@ router.get('/api/lk21/country', async (req, res, next) => {
 })
 
 
-router.get('/api/lk21/genre', async (req, res, next) => {
+router.get('/lk21/genre', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             tipe = req.query.tipe
             
@@ -2640,7 +2640,7 @@ router.get('/api/lk21/genre', async (req, res, next) => {
 })
 
 
-router.get('/api/textmaker/random', async (req, res, next) => {
+router.get('/textmaker/random', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -2727,7 +2727,7 @@ router.get('/api/textmaker/random', async (req, res, next) => {
         }
 })
 
-router.get('/api/textmaker/roses', async (req, res, next) => {
+router.get('/textmaker/roses', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -2814,7 +2814,7 @@ router.get('/api/textmaker/roses', async (req, res, next) => {
         }
 })
 
-router.get('/api/yutub/video', async (req, res, next) => {
+router.get('/yutub/video', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
             
@@ -2837,7 +2837,7 @@ router.get('/api/yutub/video', async (req, res, next) => {
 })
 
 
-router.get('/api/api/yutub/audio', async (req, res, next) => {
+router.get('/api/yutub/audio', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
             
@@ -2860,7 +2860,7 @@ router.get('/api/api/yutub/audio', async (req, res, next) => {
 })
 
 
-router.get('/api/ig/stalk', async (req, res, next) => {
+router.get('/ig/stalk', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             username = req.query.username
             
@@ -2882,7 +2882,7 @@ router.get('/api/ig/stalk', async (req, res, next) => {
 })
 })
 
-router.get('/api/comik', async (req, res, next) => {
+router.get('/comik', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             search = req.query.search
             
@@ -2904,7 +2904,7 @@ router.get('/api/comik', async (req, res, next) => {
 })
 })
 
-router.get('/api/dork', async (req, res, next) => {
+router.get('/dork', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             dork = req.query.dork
             
@@ -2926,7 +2926,7 @@ router.get('/api/dork', async (req, res, next) => {
 })
 })
 
-router.get('/api/pastebin', async (req, res, next) => {
+router.get('/pastebin', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -2948,7 +2948,7 @@ router.get('/api/pastebin', async (req, res, next) => {
 })
 })
 
-router.get('/api/maker', async (req, res, next) => {
+router.get('/maker', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -2971,7 +2971,7 @@ router.get('/api/maker', async (req, res, next) => {
 })
 
 
-router.get('/api/maker2', async (req, res, next) => {
+router.get('/maker2', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -2994,7 +2994,7 @@ router.get('/api/maker2', async (req, res, next) => {
 })
 
 
-router.get('/api/maker3', async (req, res, next) => {
+router.get('/maker3', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -3017,7 +3017,7 @@ router.get('/api/maker3', async (req, res, next) => {
 })
 
 
-router.get('/api/maker4', async (rq, res, next) => {
+router.get('/maker4', async (rq, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -3040,7 +3040,7 @@ router.get('/api/maker4', async (rq, res, next) => {
 })
 
 
-router.get('/api/maker3d', async (req, res, next) => {
+router.get('/maker3d', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -3063,7 +3063,7 @@ router.get('/api/maker3d', async (req, res, next) => {
 })
 
 
-router.get('/api/maker3d/no2', async (req, res, next) => {
+router.get('/maker3d/no2', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -3086,7 +3086,7 @@ router.get('/api/maker3d/no2', async (req, res, next) => {
 })
 
 
-router.get('/api/maker3d/no3', async (req, res, next) => {
+router.get('/maker3d/no3', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.qery.text
             
@@ -3109,7 +3109,7 @@ router.get('/api/maker3d/no3', async (req, res, next) => {
 })
 
 
-router.get('/api/maker3d/no4', async (req, res, next) => {
+router.get('/maker3d/no4', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -3132,7 +3132,7 @@ router.get('/api/maker3d/no4', async (req, res, next) => {
 })
 
 
-router.get('/api/yutub/search', async (req, res, next) => {
+router.get('/yutub/search', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             video = req.query.video
             
@@ -3155,7 +3155,7 @@ router.get('/api/yutub/search', async (req, res, next) => {
 })
 
 
-router.get('/api/maker/special/transformer', async (req, res, next) => {
+router.get('/maker/special/transformer', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -3174,7 +3174,7 @@ router.get('/api/maker/special/transformer', async (req, res, next) => {
   }
 })
 
-router.get('/api/maker/special/epep', async (req, res, next) => {
+router.get('/maker/special/epep', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             text = req.query.text
             
@@ -3194,7 +3194,7 @@ router.get('/api/maker/special/epep', async (req, res, next) => {
       }
 })
 
-router.get('/api/tomp4', async (req, res, next) => {
+router.get('/tomp4', async (req, res, next) => {
         var url = req.query.url,
              apikeyInput = req.query.apikey;
         
@@ -3243,7 +3243,7 @@ try {
    }
 })
 
-router.get('/api/ocr', async (req, res, next) => {
+router.get('/ocr', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
         img = req.query.img;
             
@@ -3275,7 +3275,7 @@ router.get('/api/ocr', async (req, res, next) => {
    }
 })
 
-router.get('/api/removebg', async (req, res, next) => {
+router.get('/removebg', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
         img = req.query.img;
 
@@ -3298,7 +3298,7 @@ router.get('/api/removebg', async (req, res, next) => {
    }
 })
 
-router.get('/api/simsimi', async (req, res, next) => {
+router.get('/simsimi', async (req, res, next) => {
         var kata = req.query.kata,
 	apikeyInput = req.query.apikey;
 
@@ -3320,7 +3320,7 @@ router.get('/api/simsimi', async (req, res, next) => {
    }
 })
 
-router.get('/api/binary', async (req, res, next) => {
+router.get('/binary', async (req, res, next) => {
 	var apikeyInput = req.query.apikey,
        text = req.query.encode
 
@@ -3341,7 +3341,7 @@ router.get('/api/binary', async (req, res, next) => {
    }
 })
 
-router.get('/api/binary', async (req, res, next) => {
+router.get('/binary', async (req, res, next) => {
 	var apikeyInput = req.query.apikey,
         text = req.query.decode;
 
@@ -3362,7 +3362,7 @@ router.get('/api/binary', async (req, res, next) => {
    }
 })
 
-router.get('/api/tobase64', async (req, res, next) => {
+router.get('/tobase64', async (req, res, next) => {
 	var apikeyInput = req.query.apikey,
         img = req.query.img;
 
@@ -3382,7 +3382,7 @@ router.get('/api/tobase64', async (req, res, next) => {
    }
 })
 
-router.get('/api/tomedia', async (req, res, next) => {
+router.get('/tomedia', async (req, res, next) => {
 	var apikeyInput = req.query.apikey,
         base64 = req.query.base64;
 
@@ -3399,7 +3399,7 @@ router.get('/api/tomedia', async (req, res, next) => {
    }
 })
 
-router.get('/api/ttp', async (req, res, next) => {
+router.get('/ttp', async (req, res, next) => {
      var text = req.query.text,
      apikeyInput = req.query.apikey;
 
@@ -3419,7 +3419,7 @@ router.get('/api/ttp', async (req, res, next) => {
       }
 })
 
-router.get('/api/dadu', async (req, res, next) => {
+router.get('/dadu', async (req, res, next) => {
 	var apikeyInput = req.query.apikey
 
   if(!apikeyInput) return res.json(loghandler.notparam)
@@ -3433,7 +3433,7 @@ router.get('/api/dadu', async (req, res, next) => {
    res.sendFile(__path + '/tmp/dadu.png')
 })
 
-router.get('/api/repeat', (req, res, next) => {
+router.get('/repeat', (req, res, next) => {
 
 const repeat = (text, total) => {
 		return text.repeat(total)
@@ -3457,7 +3457,7 @@ const repeat = (text, total) => {
        })
 })
 
-router.get('/api/reverse', async (req, res, next) => {
+router.get('/reverse', async (req, res, next) => {
        var text = req.query.text,
 	   apikeyInput = req.query.apikey;
 
@@ -3478,7 +3478,7 @@ router.get('/api/reverse', async (req, res, next) => {
    }
 })
 
-router.get('/api/spamcall', async (req, res, next) => {
+router.get('/spamcall', async (req, res, next) => {
        var nomor = req.query.nomor,
 	   apikeyInput = req.query.apikey;
 
@@ -3496,7 +3496,7 @@ router.get('/api/spamcall', async (req, res, next) => {
    }
 })
 
-router.get('/api/spamsms', async (req, res, next) => {
+router.get('/spamsms', async (req, res, next) => {
        var nomor = req.query.nomor,
               jumlah = req.query.jumlah,
 	         apikeyInput = req.query.apikey;
@@ -3518,7 +3518,7 @@ router.get('/api/spamsms', async (req, res, next) => {
    }
 })
 
-router.get('/api/bokep', async (req, res, next) => {
+router.get('/bokep', async (req, res, next) => {
      var apikeyInput = req.query.apikey;
 
   if(!apikeyInput) return res.json(loghandler.notparam)
@@ -3536,7 +3536,7 @@ router.get('/api/bokep', async (req, res, next) => {
       }
 })
 
-router.get('/api/googleimage', async (req, res, next) => {
+router.get('/googleimage', async (req, res, next) => {
 	var q = req.query.q,
      apikeyInput = req.query.apikey;
 
@@ -3558,7 +3558,7 @@ router.get('/api/googleimage', async (req, res, next) => {
       }
 })
 
-router.get('/api/say', async (req, res, next) => {
+router.get('/say', async (req, res, next) => {
      var apikeyInput = req.query.apikey,
             text = req.query.text;
 
@@ -3572,7 +3572,7 @@ router.get('/api/say', async (req, res, next) => {
        })
 })
 
-router.get('/api/md5', async (req, res, next) => {
+router.get('/md5', async (req, res, next) => {
      var apikeyInput = req.query.apikey,
             text = req.query.text;
 
@@ -3588,7 +3588,7 @@ router.get('/api/md5', async (req, res, next) => {
        })
 })
 
-router.get('/api/tahta', async (req, res, next) => {
+router.get('/tahta', async (req, res, next) => {
    var text = req.query.text,
           apikeyInput = req.query.apikey;
 
@@ -3602,7 +3602,7 @@ router.get('/api/tahta', async (req, res, next) => {
     res.sendFile(__path + '/tmp/tahta.png')
 })
 
-router.get('/api/customtahta', async (req, res, next) => {
+router.get('/customtahta', async (req, res, next) => {
    var text = req.query.text,
           apikeyInput = req.query.apikey;
 
@@ -3616,7 +3616,7 @@ router.get('/api/customtahta', async (req, res, next) => {
     res.sendFile(__path + '/tmp/cstahta.png')
 })
 
-router.get('/api/anime/random', async (req, res, next) => {
+router.get('/anime/random', async (req, res, next) => {
      var apikeyInput = req.query.apikey;
 
   if(!apikeyInput) return res.json(loghandler.notparam)
@@ -3636,7 +3636,7 @@ router.get('/api/anime/random', async (req, res, next) => {
       }
 })
 
-router.get('/api/kpop/random', async (req, res, next) => {
+router.get('/kpop/random', async (req, res, next) => {
      var apikeyInput = req.query.apikey;
 
   if(!apikeyInput) return res.json(loghandler.notparam)
@@ -3656,7 +3656,7 @@ router.get('/api/kpop/random', async (req, res, next) => {
       }
 })
 
-router.get('/api/random/manga', async (req, res, next) => {
+router.get('/random/manga', async (req, res, next) => {
      var apikeyInput = req.query.apikey;
 
   if(!apikeyInput) return res.json(loghandler.notparam)
@@ -3676,7 +3676,7 @@ router.get('/api/random/manga', async (req, res, next) => {
       }
 })
 
-router.get('/api/triggered', async (req, res, next) => {
+router.get('/triggered', async (req, res, next) => {
        var img = req.query.img,
 	   apikeyInput = req.query.apikey;
 	
@@ -3697,7 +3697,7 @@ router.get('/api/triggered', async (req, res, next) => {
       }
 })
 
-router.get('/api/emojitopng', async (req, res, next) => {
+router.get('/emojitopng', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
                emoji = req.query.emoji;
 
@@ -3715,7 +3715,7 @@ try {
 	res.sendFile(error)   }
 })
 
-router.get('/api/brainly', async (req, res, next) => {
+router.get('/brainly', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
                text = req.query.text;
 
@@ -3733,7 +3733,7 @@ try {
    }
 })
 
-router.get('/api/pantun', async (req, res, next) => {
+router.get('/pantun', async (req, res, next) => {
         var apikeyInput = req.query.apikey;
 
 try {
@@ -3749,7 +3749,7 @@ try {
    }
 })
 
-router.get('/api/memeindo', async (req, res, next) => {
+router.get('/memeindo', async (req, res, next) => {
         var apikeyInput = req.query.apikey;
 
 try {
@@ -3767,7 +3767,7 @@ try {
    }
 })	
 
-router.get('/api/artinama', async (req, res, next) => {
+router.get('/artinama', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
                nama = req.query.nama;
 
@@ -3859,7 +3859,7 @@ router.get('/kuis/caklontong', async (req, res, next) => {
 })
 })
 
-router.get('/api/asupan', async (req, res, next) => {
+router.get('/asupan', async (req, res, next) => {
         var apikeyInput = req.query.apikey;
 
 try {
@@ -3875,7 +3875,7 @@ try {
    }
 })
 
-router.get('/api/cerpen', async (req, res, next) => {
+router.get('/cerpen', async (req, res, next) => {
         var apikeyInput = req.query.apikey;
 
 try {
@@ -3898,7 +3898,7 @@ try {
    }
 })
 
-router.get('/api/mediafire', async (req, res, next) => {
+router.get('/mediafire', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
 	    url = req.query.url;
 
@@ -3917,7 +3917,7 @@ try {
    }
 })
 
-router.get('/api/tts', async (req, res, next) => {
+router.get('/tts', async (req, res, next) => {
        var text = req.query.text,
 	   lang = req.query.lang,
 	   apikeyInput = req.query.apikey;
