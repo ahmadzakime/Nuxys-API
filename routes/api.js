@@ -25,6 +25,7 @@ var ytpl = require('ytpl');
 var qrcode = require('qrcode');
 var secure = require('ssl-express-www');
 var cors = require('cors');
+var zaki = require("../lib/apidl")
 var scrapeYt = require('scrape-yt');
 var gtts = require('node-gtts');
 var fetch = require('node-fetch');
@@ -953,6 +954,31 @@ router.get('/quran', async (req, res, next) => {
                  result
              })
          })
+         .catch(e => {
+         	res.sendFile(error)
+})
+})
+
+router.get('/igdown', async (req, res, next) => {
+
+        var apikeyInput = req.query.apikey,
+
+            url = req.query.url
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
+    if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
+    
+    zaki.igstory(username).then(async (data) => {
+		if (!data) return res.json(loghandler.instgram) 
+		limitapikey(req.query.apikey)
+		res.json({
+			status: true,
+	        creator: `${creator}`,
+			result: data
+	    })
+	})
+
          .catch(e => {
          	res.sendFile(error)
 })
