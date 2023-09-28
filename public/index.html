@@ -760,6 +760,18 @@
         animation: true
       })
     </script>
+    <script>
+    window.setTimeout("waktu()", 1000);
+
+	function waktu() {
+		var d = new Date();
+  const jam = d.getHours();
+  const menit = d.getMinutes();
+  const detik = d.getSeconds();
+		setTimeout("waktu()", 1000);
+		document.getElementById("Clock").innerHTML = jam +" : "+ menit +" : "+ detik +" WIB";
+	}
+    </script>
 																	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 																	<script src="vendors/js/vendor.bundle.base.js"></script>
 																	<script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
