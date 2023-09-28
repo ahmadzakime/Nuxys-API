@@ -966,7 +966,7 @@ router.get('/instagram', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       igdl(url).then(data => {
+       igdl('https://www.instagram.com/p/Cxu9BAuJzbK/?igshid=MzRlODBiNWFlZA%3D%3D').then(data => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
