@@ -958,7 +958,7 @@ router.get('/quran', async (req, res, next) => {
 })
 })
 
-router.get('/api/fbdown', async (req, res, next) => {
+router.get('/fbdown', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
             
