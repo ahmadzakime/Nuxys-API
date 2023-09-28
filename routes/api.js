@@ -25,7 +25,6 @@ var ytpl = require('ytpl');
 var qrcode = require('qrcode');
 var secure = require('ssl-express-www');
 var cors = require('cors');
-var ryzen = require("../lib/apidl")
 var scrapeYt = require('scrape-yt');
 var gtts = require('node-gtts');
 var fetch = require('node-fetch');
@@ -35,6 +34,7 @@ var TikTokScraper = require('tiktok-scraper');
 var yts = require('yt-search');
 var fs = require('fs');
 var util = require('util');
+const ryzen = require('/lib/apidl');
 var router  = express.Router();
 
 var { tts, wait, simih, getBuffer, h2k, banner, getRandom, start, info, success, close, pickRandom } = require(__path + '/lib/functions.js');
