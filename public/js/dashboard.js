@@ -80,7 +80,7 @@ Sayings = "";
 			} else if (hours >= 13 && hours <= 16){
 			Sayings += "<span class='text-success'>Selamat Sore 🌜</span>"
 			}
-document.getElementById("Ucapan").innerHTML = Sayings;
+document.getElementById("ucapan").innerHTML = Sayings;
 
 // Jam Sekarang
 window.setTimeout("waktu()", 1000);
