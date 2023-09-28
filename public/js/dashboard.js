@@ -113,7 +113,7 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-var battery_Level = document.getElementById("batteryLevel");
+var battery_Level = document.getElementById("battery_Level");
 			var styleBatteryLevel = batteryLevel.style;
 			var percentageLevel = document.getElementById("percentageLevel");
 			navigator.getBattery().then(function(battery) {
