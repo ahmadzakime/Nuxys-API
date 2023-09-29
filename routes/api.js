@@ -31,6 +31,7 @@ var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 var request = require('request');
 var TikTokScraper = require('tiktok-scraper');
+var scraper = require('@bochilteam/scraper')
 var yts = require('yt-search');
 var fs = require('fs');
 var util = require('util');
