@@ -31,7 +31,7 @@ var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 var request = require('request');
 var TikTokScraper = require('tiktok-scraper');
-var scraper = require('@bochilteam/scraper')
+var bch = require('@bochilteam/scraper')
 var yts = require('yt-search');
 var fs = require('fs');
 var util = require('util');
@@ -967,7 +967,7 @@ router.get('/instagram', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       igdl(url).then(async (data) => {
+       bch.instagramdl(url).then(async (data) => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
