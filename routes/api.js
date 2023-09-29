@@ -9,7 +9,7 @@ var kuhong = db.get('ojan'); // jan diubah
 	console.log('WELCOME TO ZAKI API!') // boleh diubah
 }
 
-var creatorList = ['Zaki','AhmadzakiDeveloper']; // Nama Lu Ngab
+var creatorList = ['Zaki','Ahmadzaki']; // Nama Lu Ngab
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)]; // Ini jan diubah
 var key = 'ZakiKey' // Apikey Lu Ngab
 
