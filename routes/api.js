@@ -3592,7 +3592,7 @@ router.get('/tahta', async (req, res, next) => {
   if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
   if (!text) return res.json(loghandler.nottext)
 
-     var hasil = tahta.buffer()
+     var hasil = await (await fetch(`https://api.zeks.xyz/api/hartatahta?text=${text}&apikey=apivinz`)).buffer()
        await fs.writeFileSync(__path + '/tmp/tahta.png', hasil)
 
     res.sendFile(__path + '/tmp/tahta.png')
