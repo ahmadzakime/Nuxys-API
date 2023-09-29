@@ -3584,26 +3584,22 @@ router.get('/md5', async (req, res, next) => {
        })
 })
 
-router.get('/customtahta', async (req, res, next) => {
-   var text = req.query.text,
-          apikeyInput = req.query.apikey;
+//router.get('/customtahta', async (req, res, next) => {
+   //var text = req.query.text,
+          //apikeyInput = req.query.apikey;
+ // if(!apikeyInput) return res.json(loghandler.notparam)
+ // if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
+ // if (!text) return res.json(loghandler.nottext)
+    // var hasil = await tahtatxt(text).buffer()
+    // await fs.writeFileSync(__path + '/tmp/cstahta.png', hasil)
 
-  if(!apikeyInput) return res.json(loghandler.notparam)
-  if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-  if (!text) return res.json(loghandler.nottext)
-
-     var hasil = await tahtatxt(text).buffer()
-       await fs.writeFileSync(__path + '/tmp/cstahta.png', hasil)
-
-    res.sendFile(__path + '/tmp/cstahta.png')
-})
+    //res.sendFile(__path + '/tmp/cstahta.png')
+//})
 
 router.get('/anime/random', async (req, res, next) => {
      var apikeyInput = req.query.apikey;
-
   if(!apikeyInput) return res.json(loghandler.notparam)
   if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-
  try {
          var json = await (await fetch(`https://api.fdci.se/rep.php?gambar=anime`)).json()
          var body = JSON.parse(JSON.stringify(json))
