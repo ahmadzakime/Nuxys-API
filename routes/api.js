@@ -2857,7 +2857,7 @@ router.get('/yutub/audio', async (req, res, next) => {
 })
 
 
-router.get('/ig/stalk', async (req, res, next) => {
+router.get('/igstalk', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             username = req.query.username
             
