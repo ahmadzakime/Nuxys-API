@@ -2843,15 +2843,13 @@ router.get('/yutub/audio', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       fetch(encodeURI(`https://api.zeks.xyz/api/ytmp3?url=${url}&apikey=alpin1234567`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-             	author: 'Zaki',
-                 result
-             })
-         })
+       bch.youtubedl(url).then(async (data) => {
+	res.json({
+	status: true,
+	creator: `${creator}`,
+	result:	data
+	})
+	})
          .catch(e => {
          	res.sendFile(error)
 })
