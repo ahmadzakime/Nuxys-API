@@ -3592,7 +3592,7 @@ router.get('/customtahta', async (req, res, next) => {
   if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
   if (!text) return res.json(loghandler.nottext)
 
-     var hasil = await tahtatxt(text = '').buffer()
+     var hasil = await tahtatxt(text).buffer()
        await fs.writeFileSync(__path + '/tmp/cstahta.png', hasil)
 
     res.sendFile(__path + '/tmp/cstahta.png')
