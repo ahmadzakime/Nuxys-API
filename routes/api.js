@@ -3584,20 +3584,6 @@ router.get('/md5', async (req, res, next) => {
        })
 })
 
-router.get('/tahta', async (req, res, next) => {
-   var text = req.query.text,
-          apikeyInput = req.query.apikey;
-
-  if(!apikeyInput) return res.json(loghandler.notparam)
-  if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-  if (!text) return res.json(loghandler.nottext)
-
-     var hasil = await tahtatxt(text).buffer()
-       await fs.writeFileSync(__path + '/tmp/tahta.png', hasil)
-
-    res.sendFile(__path + '/tmp/tahta.png')
-})
-
 router.get('/customtahta', async (req, res, next) => {
    var text = req.query.text,
           apikeyInput = req.query.apikey;
@@ -3606,7 +3592,7 @@ router.get('/customtahta', async (req, res, next) => {
   if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
   if (!text) return res.json(loghandler.nottext)
 
-     var hasil = await (await fetch(`https://api.zeks.xyz/api/tahta?text=${text}&apikey=apivinz`)).buffer()
+     var hasil = await tahtatxt(text).buffer()
        await fs.writeFileSync(__path + '/tmp/cstahta.png', hasil)
 
     res.sendFile(__path + '/tmp/cstahta.png')
