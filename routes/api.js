@@ -4001,7 +4001,7 @@ try {
   if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
   if (!text) return res.json(loghandler.nottext)
 
-     var hasil = await getBuffer(`https://api.zeks.xyz/api/sandw?apikey=apivinz&text=${text}`)
+     var hasil = await tahta(text)
        await fs.writeFileSync(__path + '/tmp/pantai.png', hasil)
 
          res.sendFile(__path + '/tmp/pantai.png')
