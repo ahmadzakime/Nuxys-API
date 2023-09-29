@@ -2865,7 +2865,7 @@ router.get('/igstalk', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!username) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter username"})
 
-       hxz.igstalk(username).then(async (data) => {
+       igstalk(username).then(async (data) => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
