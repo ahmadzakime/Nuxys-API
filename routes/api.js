@@ -18,6 +18,7 @@ var ffmpeg = require('fluent-ffmpeg');
 var brainly = require('brainly-scraper-v2');
 var imageToBase64 = require('image-to-base64');
 var upload = require(__path + '/lib/upload.js');
+var hxz = require('hxz-api')
 var axios = require('axios');
 var FormData = require('form-data');
 var ytdl = require('ytdl-core');
@@ -2864,15 +2865,13 @@ router.get('/ig/stalk', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!username) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter username"})
 
-       fetch(encodeURI(`https://mhankbarbar.herokuapp.com/api/stalk?username=${username}`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-             	author: 'Zaki',
-                 result
-            })
-         })
+       hxz.igstalk().then(async (data) => {
+	res.json({
+	status: true,
+	creator: `${creator}`,
+	result:	data
+	})
+	})
          .catch(e => {
          	res.sendFile(error)
 })
