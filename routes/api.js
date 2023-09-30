@@ -40,7 +40,7 @@ var router  = express.Router();
 
 var { tts, wait, simih, getBuffer, h2k, banner, getRandom, start, info, success, close, pickRandom } = require(__path + '/lib/functions.js');
 var { RemoveBg } = require('remove.bg');
-var scp = require(__path + '/lib/tahta.js');
+var { ssweb } = require(__path + '/lib/tahta.js');
 var { createHash } = require('crypto')
 var { spawn, exec } = require('child_process');
 var { color, bgcolor } = require(__path + '/lib/color.js');
