@@ -927,6 +927,33 @@ var batteryLevel = document.getElementById("batteryLevel");
 			};
 			});
 </script>
+<script>
+  //ucapan Tiap Hari
+Sayings = "";
+			var now = new Date();
+			var hours = now.getHours();
+			if (hours >= 17 || hours <= 2){
+			Sayings += "<span class='text-light'>Selamat malam 🌚</span>"
+			} else if (hours >= 3 && hours <= 10){
+			Sayings += "<span class='text-info'>Selamat pagi 🌝</span>"
+			} else if (hours >= 11 && hours <= 14){
+			Sayings += "<span class='text-warning'>Selamat Siang 🌞</span>"
+			} else if (hours >= 13 && hours <= 16){
+			Sayings += "<span class='text-success'>Selamat Sore 🌜</span>"
+			}
+document.getElementById("ucapan").innerHTML = Sayings;
+
+// Jam Sekarang
+window.setTimeout("waktu()", 1000);
+	function waktu() {
+		var d = new Date();
+  const jam = d.getHours();
+  const menit = d.getMinutes();
+  const detik = d.getSeconds();
+		setTimeout("waktu()", 1000);
+		document.getElementById("Clock").innerHTML = jam +" : "+ menit +" : "+ detik +" WIB";
+	}
+</script>
     <script async src="hit/api-fxc7.herokuapp.com/visits_callback_cb.js"></script>
     <script src="vendors/js/vendor.bundle.base.js"></script>
     <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
