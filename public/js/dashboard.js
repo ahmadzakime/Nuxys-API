@@ -105,7 +105,7 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  document.getElementById("IdulAdha").innerHTML = days + " Days " + hours + " Hours "
+  document.getElementById("tahunbaru").innerHTML = days + " Days " + hours + " Hours "
   + minutes + " Min " + seconds + " Sec ";
   if (distance < 0) {
     clearInterval(x);
