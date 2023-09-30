@@ -4242,14 +4242,12 @@ try {
   if (!url) return res.json(loghandler.noturl)
   if (!url.startsWith('http')) return res.json(loghandler.invalidLink)
 
-     var hasil = await getBuffer(`http://nurutomo.herokuapp.com/api/ssweb?url=${url}`)
-       await fs.writeFileSync(__path + '/tmp/screenshot.png', hasil)
-
-         res.sendFile(__path + '/tmp/screenshot.png')
-} catch (e) {
-     console.log(e)
-	res.sendFile(error)
-   }
+     scp.ssweb(link).then((data) =>{ 
+		res.set({'Content-Type': 'image/png'})
+		res.send(data)
+	}).catch((err) =>{
+	 res.json(loghandler.notfound)
+	})
 })
 
 router.get('/calculator', async (req, res) => {
