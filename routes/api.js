@@ -4242,14 +4242,15 @@ try {
   if (!url) return res.json(loghandler.noturl)
   if (!url.startsWith('http')) return res.json(loghandler.invalidLink)
 
-     scp.ssweb(link).then((data) =>{
+ryzen.ssweb(link).then((data) =>{ 
 		res.set({'Content-Type': 'image/png'})
 		res.send(data)
-     })
-	}).catch((err) =>{
-	 res.json(loghandler.notfound)
-	
 	})
+} catch (e) {
+     console.log(e)
+	res.sendFile(error)
+   }
+})
 
 router.get('/calculator', async (req, res) => {
     var angka = req.query.angka,
