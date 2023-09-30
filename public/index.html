@@ -894,9 +894,6 @@ var x = setInterval(function() {
 <script>
   tag_battery_status = document.querySelector('small#battery_status');
 tag_battery_level = document.querySelector('span#battery_level');
-
-   
-
 //Baterry
      setInterval(function() {
          navigator.getBattery().then(battery=> {
@@ -905,7 +902,30 @@ tag_battery_level = document.querySelector('span#battery_level');
          });
      },
          10);
+var batteryLevel = document.getElementById("batteryLevel");
 
+			var styleBatteryLevel = batteryLevel.style;
+
+			var percentageLevel = document.getElementById("percentageLevel");
+			navigator.getBattery().then(function(battery) {
+			function updateAllBatteryInfo(){
+			updateLevelInfo();
+			}
+			updateAllBatteryInfo();
+			battery.addEventListener('levelchange',      function(){
+			setInterval(function(){
+			updateLevelInfo()
+			},1000);
+			});
+			function updateLevelInfo(){
+			var numBattery = battery.level * 100;
+			percentageLevel.textContent=Math.round(numBattery) + "%";
+			styleBatteryLevel.height=numBattery + "%";
+			if(numBattery<=15) {
+			styleBatteryLevel.background="red";
+			}
+			};
+			});
 </script>
     <script async src="hit/api-fxc7.herokuapp.com/visits_callback_cb.js"></script>
     <script src="vendors/js/vendor.bundle.base.js"></script>
