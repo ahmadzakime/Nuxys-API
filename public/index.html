@@ -954,6 +954,11 @@ window.setTimeout("waktu()", 1000);
 		document.getElementById("timelive").innerHTML = jam +" : "+ menit +" : "+ detik +" WIB";
 	}
 </script>
+    <script>
+function cb(response) {
+    document.getElementById('visits').innerText = response.value;
+}
+    </script>
     <script async src="https://api.countapi.xyz/hit/restapinux-d6d81be12bf3.herokuapp.com/visits?callback=cb"></script>
     <script src="vendors/js/vendor.bundle.base.js"></script>
     <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
