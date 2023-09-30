@@ -4242,7 +4242,7 @@ try {
   if (!url) return res.json(loghandler.noturl)
   if (!url.startsWith('http')) return res.json(loghandler.invalidLink)
 
-ryzen.ssweb(link).then((data) =>{ 
+scp.ssweb(link).then((data) =>{ 
 		res.set({'Content-Type': 'image/png'})
 		res.send(data)
 	})
