@@ -762,7 +762,6 @@
     </script>
     <script>
       window.setTimeout("waktu()", 1000);
-
 	function waktu() {
 		var d = new Date();
   const jam = d.getHours();
@@ -834,11 +833,11 @@ ThisDay = myDays[thisDay];
 var yy = tgl.getYear()
 var year = (yy < 1000) ? yy + 1900 : yy;
 
-const Tanggall = `${ThisDay}, ${day} - ${myMonths[bulan]} - ${year}`
+const Tanggal = `${ThisDay}, ${day} - ${myMonths[bulan]} - ${year}`
 
 document.getElementById("Years").innerHTML = year;
 document.getElementById("Statistic").innerHTML = txt;
-document.getElementById("Tanggall").innerHTML = Tanggall;
+document.getElementById("Tanggal").innerHTML = Tanggal;
    </script>
    <script>
    var batteryLevel = document.getElementById("batteryLevel");
