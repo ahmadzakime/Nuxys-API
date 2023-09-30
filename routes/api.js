@@ -40,7 +40,7 @@ var router  = express.Router();
 
 var { tts, wait, simih, getBuffer, h2k, banner, getRandom, start, info, success, close, pickRandom } = require(__path + '/lib/functions.js');
 var { RemoveBg } = require('remove.bg');
-var { ssweb, igstalk } = require(__path + '/lib/tahta.js');
+var { ssweb, igstalkk } = require(__path + '/lib/tahta.js');
 var { createHash } = require('crypto')
 var { spawn, exec } = require('child_process');
 var { color, bgcolor } = require(__path + '/lib/color.js');
@@ -2865,7 +2865,7 @@ router.get('/igstalk', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!username) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter username"})
 
-       igstalk(username).then(async (data) => {
+       igstalkk(username).then(async (data) => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
