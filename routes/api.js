@@ -264,9 +264,9 @@ router.get('/addapikey', (req, res, next) => {
         apikeyInput  = req.query.apikeyInput,
         exp = req.query.exp;
 
-    if (!apikey) return res.sendFile(__path + '/docs/403.html')
-    if (!(apikeyInput && email)) return res.json(loghandler.notAddApiKey)
-    if (apikey != `${keyapi}`) return res.json(loghandler.invalidKey)
+    
+    if (!apikeyInput) return res.json(loghandler.notAddApikey)
+    if (apikey != `${key}`) return res.json(loghandler.invalidKey)
 
     try {
         lolkill.insert({
