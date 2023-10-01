@@ -259,6 +259,32 @@ try {
    }
 })
 
+router.get('/addapikey', (req, res, next) => {
+    var apikey = req.query.apikey,
+        apikeyInput  = req.query.apikeyInput,
+        exp = req.query.exp;
+
+    if (!apikey) return res.json(loghandler.notparam)
+    if (apikey != 'ZakiKey') return res.json(loghandler.invalidKey)
+
+    try {
+        nuxapi.insert({
+        	status: status,
+            apikey: apikeyInput,
+            exp: exp
+        })
+        .then(() => {
+              res.json({
+                  status: true,
+                  creator: `${creator}`,
+                  result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
+              })
+        })
+    } catch (e) {
+        console.log(e)
+        res.json(loghandler.error)
+    }
+})
 router.get('/addkey', (req, res, next) => {
     var apikeyInput = req.query.apikey;
 
