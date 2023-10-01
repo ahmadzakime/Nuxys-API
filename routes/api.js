@@ -247,7 +247,6 @@ router.get('/cekapikey', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
 	var limit = 'undefined'
         if (apikeyInput == `${key}`) { limit = '9999999999999999999' }
-
 try {
 	res.json({
                status : `active`,
@@ -260,12 +259,11 @@ try {
    }
 })
 
-router.get('/changekey', (req, res, next) => {
+router.get('/addkey', (req, res, next) => {
     var apikeyInput = req.query.apikey;
 
     if (!apikeyInput) return res.json(loghandler.notparam)
     if (apikeyInput !== `${key}`) return res.sendFile(invalidKey)
-
     try {
         kuhong.insert({
             apikey: apikeyInput
