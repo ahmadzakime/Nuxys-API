@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const url = "mongodb+srv://nuxysapi:<password>@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority";
 function connectMongoDb() {
     mongoose.connect(url, { 
       useNewUrlParser: true, 
