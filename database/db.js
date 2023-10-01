@@ -3,9 +3,9 @@ var __path = process.cwd(),
      { color } = require(__path + '/lib/color.js')
 
 // Connection URL
-var url = 'https://restapinux-d6d81be12bf3.herokuapp.com';
+var url = 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority';
 try {
-if(url == 'https://restapinux-d6d81be12bf3.herokuapp.com') throw console.log(color('Cek konfigurasi database, var url belum diisi','red'));
+if(url == 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority') throw console.log(color('Cek konfigurasi database, var url belum diisi','red'));
 } catch (e) {
 	return;
 	}
