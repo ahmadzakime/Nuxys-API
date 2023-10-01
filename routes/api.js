@@ -269,7 +269,7 @@ router.get('/addapikey', (req, res, next) => {
     if (apikey != `${key}`) return res.json(loghandler.invalidKey)
 
     try {
-        lolkill.insert({
+        nuxapi.insert({
             apikey: apikeyInput,
             exp: exp
         })
