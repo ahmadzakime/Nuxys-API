@@ -2,7 +2,7 @@ __path = process.cwd()
 
 // Jan asal ubah ngab
 var express = require('express');
-var connectMongoDb = require(__path + '/database/db');
+var db = require(__path + '/database/db');
 try {
 var nuxapi = connectMongoDb.get('hlx'); // jan diubah
 } catch (e) {
