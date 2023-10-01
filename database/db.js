@@ -13,4 +13,4 @@ function connectMongoDb() {
     });
 };
 
-module.exports.connectMongoDb = db;
+module.exports.connectMongoDb = connectMongoDb;
