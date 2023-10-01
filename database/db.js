@@ -12,7 +12,7 @@ if(url == 'https://restapinux-d6d81be12bf3.herokuapp.com') throw console.log(col
 var db = monk(url);
 
 db.then(() => {
-  console.log(color('Connected correctly to server, Kuhong-API','green'))
+  console.log(color('Connected correctly to server, NUXYS-API','green'))
 })
 .catch ((e) => {
 	console.log(color('Error : '+ e +'\n\nGagal connect ke database, \ncek configurasi database apakah Connection URL sudah benar','red'))
