@@ -4,7 +4,7 @@ __path = process.cwd()
 var express = require('express');
 const mongoose = require('mongoose');
 var connectMongoDb = require(__path + '/database/db');
-const { Users } = require('./database/db');
+const { Users } = require('../database/db');
 try {
 var nuxapi = connectMongoDb.get('nuxysapi'); // jan diubah
 } catch (e) {
