@@ -4,7 +4,7 @@ __path = process.cwd()
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
-var kuhong = db.get('ojan'); // jan diubah
+var nuxapi = db.get('hlx'); // jan diubah
 } catch (e) {
 	console.log('WELCOME TO ZAKI API!') // boleh diubah
 }
@@ -264,7 +264,7 @@ router.get('/addkey', (req, res, next) => {
 
     if (!apikeyInput) return res.json(loghandler.notparam)
     try {
-        kuhong.insert({
+        nuxapi.insert({
             apikey: apikeyInput
         })
         .then(() => {
@@ -286,7 +286,7 @@ router.get('/removekey', (req, res, next) => {
     if (apikeyInput !== `${key}`) return res.sendFile(invalidKey)
 
     try {
-        kuhong.remove({
+        nuxapi.remove({
             apikey: apikeyInput
         })
         .then(() => {
