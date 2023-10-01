@@ -2,9 +2,9 @@ __path = process.cwd()
 
 // Jan asal ubah ngab
 var express = require('express');
-var db = require(__path + '/database/db');
+var connectMongoDb = require(__path + '/database/connectMongoDb');
 try {
-var nuxapi = db.get('hlx'); // jan diubah
+var nuxapi = connectMongoDb.get('hlx'); // jan diubah
 } catch (e) {
 	console.log('WELCOME TO ZAKI API!') // boleh diubah
 }
@@ -4117,7 +4117,7 @@ try {
   if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
   if (!text) return res.json(loghandler.nottext)
 
-     var hasil = await getBuffer(`https://api.zeks.xyz/api/text3dbox?apikey=apivinz&text=${text}`)
+     var hasil = await getBuffer(`https://api.zeks.xyz/api/text3connectMongoDbox?apikey=apivinz&text=${text}`)
        await fs.writeFileSync(__path + '/tmp/3d.png', hasil)
 
          res.sendFile(__path + '/tmp/3d.png')
@@ -4328,7 +4328,7 @@ try {
      var media = await getBuffer(img)
      var body = new FormData
          body.append('image', media, 'image')
-         var ress = await fetch('http://max-image-resolution-enhancer.codait-prod-41208c73af8fca213512856c7a09db52-0000.us-east.containers.appdomain.cloud/model/predict', {
+         var ress = await fetch('http://max-image-resolution-enhancer.codait-prod-41208c73af8fca213512856c7a09connectMongoDb52-0000.us-east.containers.appdomain.cloud/model/predict', {
             method: 'POST',
             body
             })
