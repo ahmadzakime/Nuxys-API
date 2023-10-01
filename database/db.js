@@ -1,22 +1,16 @@
-var __path = process.cwd(),
-      monk = require('monk'),
-     { color } = require(__path + '/lib/color.js')
+const mongoose = require('mongoose');
 
-// Connection URL
-var url = 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority';
-try {
-if(url == 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority') throw console.log(color('Configurasi database, var url belum diisi','red'));
-} catch (e) {
-	return;
-	}
-var db = monk(url);
+let url = 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority'
+function connectMongoDb() {
+    mongoose.connect(url, { 
+      useNewUrlParser: true, 
+      useUnifiedTopology: true
+    });
+    const db = mongoose.connection;
+    db.on('error', console.error.bind(console, 'connection error:'));
+    db.once('open', () => {
+      console.log('Succes connect to MONGODB ✅');
+    });
+};
 
-db.then(() => {
-  console.log(color('Connected correctly to server, HLXEVO✅','green'))
-})
-.catch ((e) => {
-	console.log(color('Error : '+ e +'\n\nGagal connect ke database, \ncek configurasi database apakah Connection URL sudah benar','red'))
-	})
-
-
-module.exports = db
+module.exports.connectMongoDb = connectMongoDb;
