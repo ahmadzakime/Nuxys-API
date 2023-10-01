@@ -3,11 +3,12 @@ var express = require('express'),
     secure = require('ssl-express-www');
 const PORT = process.env.PORT || 8080 || 5000 || 3000
 var { color } = require('./lib/color.js')
-
+const { connectMongoDb } = require('./MongoDB/mongodb');
 var mainrouter = require('./routes/main'),
     apirouter = require('./routes/api')
 var app = express()
 
+connectMongoDb();
 app.enable('trust proxy');
 app.set("json spaces",2)
 app.use(cors())
