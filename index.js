@@ -9,7 +9,6 @@ var mainrouter = require('./routes/main'),
 const { connectMongoDb } = require('./database/db');
 var app = express()
 
-connectMongoDb();
 app.enable('trust proxy');
 app.set("json spaces",2)
 app.use(cors())
