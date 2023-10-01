@@ -4,7 +4,7 @@ __path = process.cwd()
 var express = require('express');
 var connectMongoDb = require(__path + '/database/connectMongoDb');
 try {
-var nuxapi = connectMongoDb.get('hlx'); // jan diubah
+var nuxapi = connectMongoDb.get("hlx"); // jan diubah
 } catch (e) {
 	console.log('WELCOME TO ZAKI API!') // boleh diubah
 }
