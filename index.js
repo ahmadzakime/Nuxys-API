@@ -6,8 +6,10 @@ var { color } = require('./lib/color.js')
 
 var mainrouter = require('./routes/main'),
     apirouter = require('./routes/api')
-
+const { connectMongoDb } = require('./database/db');
 var app = express()
+
+connectMongoDb();
 app.enable('trust proxy');
 app.set("json spaces",2)
 app.use(cors())
