@@ -263,7 +263,6 @@ router.get('/addkey', (req, res, next) => {
     var apikeyInput = req.query.apikey;
 
     if (!apikeyInput) return res.json(loghandler.notparam)
-    if (apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     try {
         kuhong.insert({
             apikey: apikeyInput
