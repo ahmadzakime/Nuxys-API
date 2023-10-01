@@ -264,12 +264,12 @@ router.get('/addapikey', (req, res, next) => {
         apikeyInput  = req.query.apikeyInput,
         exp = req.query.exp;
 
-    if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'ZakiKey') return res.json(loghandler.invalidKey)
+    if (!apikey) return res.sendFile(__path + '/docs/403.html')
+    if (!(apikeyInput && email)) return res.json(loghandler.notAddApiKey)
+    if (apikey != `${keyapi}`) return res.json(loghandler.invalidKey)
 
     try {
-        nuxapi.insert({
-        	status: status,
+        lolkill.insert({
             apikey: apikeyInput,
             exp: exp
         })
@@ -277,14 +277,16 @@ router.get('/addapikey', (req, res, next) => {
               res.json({
                   status: true,
                   creator: `${creator}`,
-                  result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
+                  result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ',
+                     exp : ' + exp
               })
         })
     } catch (e) {
         console.log(e)
-        res.json(loghandler.error)
+        res.sendFile(error)
     }
 })
+
 router.get('/addkey', (req, res, next) => {
     var apikeyInput = req.query.apikey;
 
