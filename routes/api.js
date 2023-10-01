@@ -4,6 +4,7 @@ __path = process.cwd()
 var express = require('express');
 const mongoose = require('mongoose');
 var connectMongoDb = require(__path + '/database/db');
+const { Users } = require('./database/db');
 try {
 var nuxapi = connectMongoDb.get('nuxysapi'); // jan diubah
 } catch (e) {
@@ -264,10 +265,6 @@ router.get('/addapikey', (req, res, next) => {
     var apikey = req.query.apikey,
         apikeyInput  = req.query.apikeyInput,
         exp = req.query.exp;
-    const Users = mongoose.Schema({
-    apikey: { type: String }
-}, { versionKey: false });
-
     
     if (!apikeyInput) return res.json(loghandler.notAddApikey)
     if (apikey != `${key}`) return res.json(loghandler.invalidKey)
