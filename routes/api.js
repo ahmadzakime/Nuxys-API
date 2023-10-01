@@ -264,13 +264,16 @@ router.get('/addapikey', (req, res, next) => {
     var apikey = req.query.apikey,
         apikeyInput  = req.query.apikeyInput,
         exp = req.query.exp;
+    const Users = mongoose.Schema({
+    apikey: { type: String }
+}, { versionKey: false });
 
     
     if (!apikeyInput) return res.json(loghandler.notAddApikey)
     if (apikey != `${key}`) return res.json(loghandler.invalidKey)
 
     try {
-        nuxapi.insert({
+        Users.create({
             apikey: apikeyInput,
             exp: exp
         })
