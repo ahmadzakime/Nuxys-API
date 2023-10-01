@@ -3,9 +3,9 @@ __path = process.cwd()
 // Jan asal ubah ngab
 var express = require('express');
 const mongoose = require('mongoose');
-var db = require(__path + '/database/db');
+var connectMongoDb = require(__path + '/database/db');
 try {
-var nuxapi = db.get('nuxysapi'); // jan diubah
+var nuxapi = connectMongoDb.get('nuxysapi'); // jan diubah
 } catch (e) {
 	console.log('WELCOME TO ZAKI API!') // boleh diubah
 }
