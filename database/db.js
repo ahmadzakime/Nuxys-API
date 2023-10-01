@@ -5,7 +5,7 @@ var __path = process.cwd(),
 // Connection URL
 var url = 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority';
 try {
-if(url == 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority') throw 
+if(url == `${url}`) throw 
 console.log(color('Cek konfigurasi database, var url belum diisi','red'));
 } catch (e) {
 	return;
