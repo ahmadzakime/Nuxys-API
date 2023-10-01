@@ -12,7 +12,7 @@ if(url == 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/
 var db = monk(url);
 
 db.then(() => {
-  console.log(color('Connected correctly to server, HLXEVO','green'))
+  console.log(color('Connected correctly to server, HLXEVO✅'','green'))
 })
 .catch ((e) => {
 	console.log(color('Error : '+ e +'\n\nGagal connect ke database, \ncek configurasi database apakah Connection URL sudah benar','red'))
