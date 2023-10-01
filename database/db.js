@@ -1,23 +1,21 @@
-var __path = process.cwd(),
-      monk = require('monk'),
-     { color } = require(__path + '/lib/color.js')
-
-// Connection URL
-var url = 'mongodb+srv://nuxysapi:WiD31Kxeo2U3HkUP@cluster0.cmvqrmm.mongodb.net/?retryWrites=true&w=majority';
-try {
-if(url == `${url}`) throw 
-console.log(color('Cek konfigurasi database, var url belum diisi','red'));
-} catch (e) {
-	return;
-	}
-var db = monk(url);
-
-db.then(() => {
-  console.log(color('Connected correctly to server, NUXYS-API','green'))
-})
-.catch ((e) => {
-	console.log(color('Error : '+ e +'\n\nGagal connect ke database, \ncek configurasi database apakah Connection URL sudah benar','red'))
-	})
-
+const { MongoClient, ServerApiVersion } = require('mongodb');
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  }
+}
+run().catch(console.dir);
 
 module.exports = db
