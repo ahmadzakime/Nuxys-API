@@ -277,8 +277,7 @@ router.get('/addapikey', (req, res, next) => {
               res.json({
                   status: true,
                   creator: `${creator}`,
-                  result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ',
-                     exp : ' + exp
+                  result: `Apikey "${apikeyInput}" Berhasil ditambahkan!`
               })
         })
     } catch (e) {
