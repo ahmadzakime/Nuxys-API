@@ -2,6 +2,7 @@ __path = process.cwd()
 
 // Jan asal ubah ngab
 var express = require('express');
+const mongoose = require('mongoose');
 var db = require(__path + '/database/db');
 try {
 var nuxapi = db.get('nuxysapi'); // jan diubah
