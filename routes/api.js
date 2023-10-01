@@ -4,7 +4,7 @@ __path = process.cwd()
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
-var nuxapi = db.get('admin'); // jan diubah
+var nuxapi = db.get('nuxysapi'); // jan diubah
 } catch (e) {
 	console.log('WELCOME TO ZAKI API!') // boleh diubah
 }
