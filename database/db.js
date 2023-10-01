@@ -14,3 +14,16 @@ function connectMongoDb() {
 };
 
 module.exports.connectMongoDb = connectMongoDb;
+
+const Users = mongoose.Schema({
+    apikey: { type: String }
+}, { versionKey: false });
+
+async function addUser(apikey) {
+   let obj = {
+      apikey
+   };
+   User.create(obj);
+}
+module.exports.addUser = addUser
+
