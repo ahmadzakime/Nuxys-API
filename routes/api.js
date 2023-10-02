@@ -13,7 +13,7 @@ var nuxapi = connectMongoDb.get('nuxysapi'); // jan diubah
 
 var creatorList = ['Zaki','Ahmadzaki']; // Nama Lu Ngab
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)]; // Ini jan diubah
-var key = 'ZakiKey' // Apikey Lu Ngab
+var key = 'nuxapi' // Apikey Lu Ngab
 
 // Required Modules :
 var ffmpeg = require('fluent-ffmpeg');
