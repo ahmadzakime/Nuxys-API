@@ -955,12 +955,18 @@ window.setTimeout("waktu()", 1000);
 		document.getElementById("timelive").innerHTML = jam +" : "+ menit +" : "+ detik +" WIB";
 	}
 </script>
-    <script>
-function cb(response) {
-    document.getElementById('#visits').innerText = response.value;
-}
+    <script>function getvisitor(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://api.countapi.xyz/hit/restapinux.herokuapp.com/visits';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("visits").textContent = data.value
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
+ 
 </script>
-    <script async src="https://api.countapi.xyz/hit/restapinux-d6d81be12bf3.herokuapp.com/visits?callback=cb"></script>
     <script src="vendors/js/vendor.bundle.base.js"></script>
     <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
     <script src="js/off-canvas.js"></script>
