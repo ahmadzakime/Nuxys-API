@@ -928,6 +928,21 @@ var batteryLevel = document.getElementById("batteryLevel");
 			});
 </script>
 <script>
+//ucapan Tiap Hari
+Sayings = "";
+			var now = new Date();
+			var hours = now.getHours();
+			if (hours >= 17 || hours <= 2){
+			Sayings += "<span class='text-light'>Selamat malam 🌚</span>"
+			} else if (hours >= 3 && hours <= 10){
+			Sayings += "<span class='text-info'>Selamat pagi 🌝</span>"
+			} else if (hours >= 11 && hours <= 14){
+			Sayings += "<span class='text-warning'>Selamat Siang 🌞</span>"
+			} else if (hours >= 13 && hours <= 16){
+			Sayings += "<span class='text-success'>Selamat Sore 🌜</span>"
+			}
+document.getElementById("Ucapan").innerHTML = Sayings;
+
 // Jam Sekarang
 window.setTimeout("waktu()", 1000);
 	function waktu() {
@@ -939,19 +954,8 @@ window.setTimeout("waktu()", 1000);
 		document.getElementById("timelive").innerHTML = jam +" : "+ menit +" : "+ detik +" WIB";
 	}
 </script>
-<script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=qpwqx7sbalwy9g2xdmjj2eywl519deel&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=qpwqx7sbalwy9g2xdmjj2eywl519deel" border="0" title="web counter" alt="web counter"></a></noscript>
-    <script>function getvisitor(){
-              var xhr = new XMLHttpRequest();
-              var url = 'https://api.countapi.xyz/hit/restapinux.herokuapp.com/visits';
-              xhr.onloadend = function(){
-             data = JSON.parse(this.responseText);
-  document.getElementById("visits").textContent = data.value
-              };
-              xhr.open("GET", url, true);
-              xhr.send();
-  }
- 
-</script>
+<script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=qpwqx7sbalwy9g2xdmjj2eywl519deel&down=async" async></script>
+<noscript><a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=qpwqx7sbalwy9g2xdmjj2eywl519deel" border="0" title="web counter" alt="web counter"></a></noscript>
     <script src="vendors/js/vendor.bundle.base.js"></script>
     <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
     <script src="js/off-canvas.js"></script>
