@@ -5,7 +5,7 @@ var express = require('express');
 const mongoose = require('mongoose');
 var connectMongoDb = require(__path + '/database/db');
 const { Users } = require('../database/db');
-const zaki = require("../lib/listdl")
+
 try {
 var nuxapi = connectMongoDb.get('nuxysapi'); // jan diubah
 } catch (e) {
@@ -21,6 +21,7 @@ var ffmpeg = require('fluent-ffmpeg');
 var brainly = require('brainly-scraper-v2');
 var imageToBase64 = require('image-to-base64');
 var upload = require(__path + '/lib/upload.js');
+const zaki = require("../lib/listdl")
 var hxz = require('hxz-api')
 var axios = require('axios');
 var FormData = require('form-data');
