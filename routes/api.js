@@ -51,7 +51,7 @@ var { recognize } = require(__path + '/lib/ocr.js')
 var options = require(__path + '/lib/options.js');
 var { Vokal, Base, Searchnabi, Gempa } = require('./../lib');
 let { igstory,
-tafsirsurah,  tafsirsurah
+tafsirsurah,  tafsirsurah,
 ssweb,  
 stickersearch,   
 telesticker,   
