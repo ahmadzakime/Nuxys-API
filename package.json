@@ -33,6 +33,7 @@
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.5",
     "cors": "^2.8.5",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "form-data": "^3.0.0",
     "fluent-ffmpeg": "^2.1.2",
