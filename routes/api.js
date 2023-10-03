@@ -989,7 +989,7 @@ router.get('/quran', async (req, res, next) => {
 })
 })
 
-router.get('/instagram', async (req, res, next) => {
+router.get('/downlaod/ig', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
             
