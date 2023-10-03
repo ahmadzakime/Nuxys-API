@@ -744,7 +744,7 @@ router.get('/textmaker/game', async (req, res, next) => {
         if (!text) return res.json(loghandler.nottext)
 
         if (theme == 'pubg') {
-        	if (!text2) return rs.jso(loghandler.nottext2)
+        	if (!text2) return res.json(loghandler.nottext2)
             try {
             request.post({
                 url: "https://photooxy.com/battlegrounds/make-wallpaper-battlegrounds-logo-text-146.html",
