@@ -5,6 +5,7 @@ var express = require('express');
 const mongoose = require('mongoose');
 var connectMongoDb = require(__path + '/database/db');
 const { Users } = require('../database/db');
+const zaki = require("../lib/listdl")
 try {
 var nuxapi = connectMongoDb.get('nuxysapi'); // jan diubah
 } catch (e) {
