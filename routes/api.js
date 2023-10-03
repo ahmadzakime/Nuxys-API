@@ -2844,7 +2844,7 @@ router.get('/textmaker/roses', async (req, res, next) => {
         }
 })
 
-router.get('/yutub/video', async (req, res, next) => {
+router.get('/download/ytmp4', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
             
@@ -2865,7 +2865,7 @@ router.get('/yutub/video', async (req, res, next) => {
 })
 
 
-router.get('/yutub/audio', async (req, res, next) => {
+router.get('/download/ytmp3', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             url = req.query.url
             
