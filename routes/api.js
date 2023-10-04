@@ -333,7 +333,7 @@ router.get('/removekey', (req, res, next) => {
     }
 })
 
-router.get('/tiktod', async (req, res, next) => {
+router.get('/download/tiktok', async (req, res, next) => {
     var apikeyInput = req.query.apikey,
         url = req.query.url
 
@@ -356,7 +356,7 @@ router.get('/tiktod', async (req, res, next) => {
          })
 })
 
-router.get('/tiktod/stalk', async (req, res, next) => {
+router.get('/stalk/tiktok', async (req, res, next) => {
     var apikeyInput = req.query.apikey,
         username = req.query.username
 
