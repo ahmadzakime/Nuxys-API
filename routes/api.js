@@ -1031,6 +1031,30 @@ router.get('/download/fb', async (req, res, next) => {
 })
 })
 
+router.get('/download/joox', async (req, res, next) => {
+
+
+
+        var apikeyInput = req.query.apikey,
+
+            url = req.query.url
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
+    if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
+
+       bch.instagramdl(url).then(async (data) => {
+	res.json({
+	status: true,
+	creator: `${creator}`,
+	result:	data
+	})
+	})
+         .catch(e => {
+         	res.sendFile(error)
+})
+})
+
 
 router.get('/textmaker/metallic', async (req, res, next) => {
         var theme = req.query.theme,
