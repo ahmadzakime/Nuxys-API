@@ -1043,7 +1043,7 @@ router.get('/download/joox', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       bch.instagramdl(url).then(async (data) => {
+       zaki.joox(url).then(async (data) => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
