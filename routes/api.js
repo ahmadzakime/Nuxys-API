@@ -1019,7 +1019,7 @@ router.get('/download/fb', async (req, res, next) => {
 	if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "Masukan parameter url"})
 
-       bch.snapsave(url).then(async (data) => {
+       bch.instagramdl(url).then(async (data) => {
 	res.json({
 	status: true,
 	creator: `${creator}`,
